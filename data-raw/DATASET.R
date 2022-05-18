@@ -10,7 +10,7 @@ for (file in list.files(stband_table_dir)) {
 }
 
 for (file in list.files(uniband_table_dir)) {
-  load(paste0(uniband_table_dir, file)); assign(file, qtable)
+  load(paste0(uniband_table_dir, file)); assign(file, utable)
 }
 
 dont_save <- c(

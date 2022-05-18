@@ -13,3 +13,4 @@ URL: https://github.com/uni-Arya/fdpbandsdata
 BugReports: https://github.com/uni-Arya/fdpbandsdata/issues
 Depends: 
     R (>= 2.10)
+LazyData: true

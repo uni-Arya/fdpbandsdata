@@ -1,16 +1,20 @@
-## Set working directory to package folder
+## Set working directory to fdpbandsdata/
+## Creates the file "R/sysdata.rda", which will contain all generated tables
 
-# Add Dropbox link
-stband_table_dir  <- "~/quantile-tables/"
-uniband_table_dir <- "~/u_gamma-tables/"
-save_to           <- "~/work/fdpbandsdata/R/sysdata.rda"
+stband_table_dir  <- "data-raw/quantile-tables/"
+uniband_table_dir <- "data-raw/u_gamma-tables/"
+save_to           <- "R/sysdata.rda"
 
 for (file in list.files(stband_table_dir)) {
-  load(paste0(stband_table_dir, file)); assign(file, qtable)
+  if (file != "README.txt") {
+    load(paste0(stband_table_dir, file)); assign(file, qtable)
+  }
 }
 
 for (file in list.files(uniband_table_dir)) {
-  load(paste0(uniband_table_dir, file)); assign(file, utable)
+  if (file != "README.txt") {
+    load(paste0(uniband_table_dir, file)); assign(file, utable)
+  }
 }
 
 dont_save <- c(

@@ -1,10 +1,19 @@
 Package: fdpbandsdata
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Title: Pre-computed data tables for computation of upper prediction bands in
+  the 'bandsfdp' package.
+Version: 1.0.0
+Authors@R: c(
+    person(
+      "Arya", "Ebadi",
+      email = "aeba3842@uni.sydney.edu.au", 
+      role  = c("aut", "cre")
+    )
+  )
+Description: This package contains tables of pre-computed quantiles and 
+  confidence parameters for the standardized and uniform bands, respectively 
+  (see Ebadi et al. (2022) <arxiv:2302.11837)> for more details). One may 
+  compute these bands (using package 'bandsfdp') after installing these tables. 
+  The source code is located under fdpbandsdata/data-raw/.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -12,5 +21,4 @@ RoxygenNote: 7.1.2
 URL: https://github.com/uni-Arya/fdpbandsdata
 BugReports: https://github.com/uni-Arya/fdpbandsdata/issues
 Depends: 
-    R (>= 2.10)
-LazyData: true
+    R (>= 3.50)

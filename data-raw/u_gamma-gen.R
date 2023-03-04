@@ -40,7 +40,7 @@ compute_u_gammas <- function(c_load, lambda_load, n_decoys) {
       # For numerical precision
       eps   <- .Machine$double.eps * 1e4
       index <- n_mc * confs
-      hi    <- floor(index + eps) + 1
+      hi    <- ceiling(index - eps)
 
       # Storage of important quantities
       result_list <- as.list(rep(0, 3))
